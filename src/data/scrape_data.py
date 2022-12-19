@@ -42,6 +42,7 @@ def get_game_data(game_url):
 
     return full_row_data
 
+
 seasons_urls = ['https://www.plusliga.pl/games/tour/2022.html?memo=%7B%22games%22%3A%7B%7D%7D',
                 'https://www.plusliga.pl/games/tour/2021.html',
                 'https://www.plusliga.pl/games/tour/2020.html'
