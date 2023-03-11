@@ -75,15 +75,15 @@ counter = 0
 for match_url in all_match_urls_clean:
     game_data = get_game_data(match_url)
 
-    # Filters out matches that haven't benn played yet
+    # Filters out matches that haven't been played yet
     if len(game_data) == len(column_names):
         counter += 1
         all_match_data = np.vstack((all_match_data, game_data))
-        print(f'Scraped {counter}/{len(all_match_urls_clean)}')
+        print(f'Scraped {counter}/{len(all_match_urls_clean)}, Date: {game_data[0]} {match_url}')
 
 
 df = pd.DataFrame(all_match_data[1:], columns=all_match_data[0]).set_index('Date')
-df.to_csv('data.csv')
+df.to_csv('scraped_data.csv')
 
 
 
